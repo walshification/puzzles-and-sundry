@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """
 Given an integer n, write a function to count all possible sequences of
 length n such that all the elements of the sequence are in the range
@@ -22,7 +24,11 @@ def count_even_sequences(n: int) -> int:
     such that all the elements of the sequence are in the range
     [1 to n] and the sum of the elements of the sequence is even.
     """
-    return 0
+    total_sequences = n ** n
+    # half the incremental sequences will be even
+    evens = total_sequences / 2
+    # rounded down in the case of odd numbered sequence totals
+    return int(evens)
 
 
 if __name__ == "__main__":
@@ -30,4 +36,6 @@ if __name__ == "__main__":
     parser.add_argument("n", type=int)
     args = parser.parse_args()
 
-    sys.exit(count_even_sequences(args.n))
+    count = count_even_sequences(args.n)
+    print(count)
+    sys.exit()
