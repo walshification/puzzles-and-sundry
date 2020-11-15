@@ -10,5 +10,8 @@ branches:
 install:
   - make ci-deps
 
+env:
+  - PYTHONPATH=.
+
 script:
-  - make test
+  - make ci-test
