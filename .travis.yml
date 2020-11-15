@@ -1,0 +1,14 @@
+language: python
+python:
+  - '3.9.0'
+sudo: false
+
+branches:
+  only:
+    - main
+
+install:
+  - make ci-deps
+
+script:
+  - make test
