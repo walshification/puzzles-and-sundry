@@ -10,5 +10,9 @@ lint:
 test-unit:
 	pipenv run pytest
 
+ci-deps:
+	pip install pipenv
+	pipenv install --dev
+
 clean:
 	pipenv clean
