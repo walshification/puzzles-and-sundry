@@ -14,4 +14,4 @@ env:
   - PYTHONPATH=.
 
 script:
-  - make ci-test
+  - make test
